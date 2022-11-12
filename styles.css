@@ -7,19 +7,9 @@
   font-family: "Roboto", sans-serif;
 }
 
-/*
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span {
-  color: 242424;
-  text-align: center;
-  line-height: 1.25;}
-
-  */
+html{
+  scroll-behavior: smooth;
+}
 
 p {
   line-height: 1.5;
@@ -36,6 +26,11 @@ nav {
   height: 80px;
   display: flex;
 }
+
+.no-cursor{
+  cursor: not-allowed;
+}
+
 
 .nav_container {
   width: 100%;
@@ -136,6 +131,73 @@ button:active {
   border-radius: 4px;
   border: none;
 }
+
+/* BURGER */
+
+.btn__menu{
+  background-color: transparent;
+  font-size: 40px;
+  text-align: center;
+  border: none;
+  color: #7342d6;
+  display: none;
+}
+
+.menu--open{
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+.menu__backdrop{
+  position: absolute;
+  background-color: #242424;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease;
+  opacity: 0;
+  visibility: hidden;
+
+}
+
+.menu--open .menu__backdrop{
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+
+}
+
+.btn__menu--close{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 8px;
+  color: white;
+}
+
+.menu__links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.menu__list{
+  padding: 32px 0;
+
+}
+
+.menu__link{
+  font-size: 40px ;
+  color: white;
+}
+
+
 
 .header__description {
   display: flex;
@@ -307,7 +369,7 @@ transform: scale(1.03);
 .books__latests{
 
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
 }
 
 .book__latest{
@@ -374,3 +436,15 @@ footer{
 .copyright{
   color: white;
 }
+
+
+@media (max-width: 550px){
+.nav__links{
+  display: none;
+}
+.btn__menu{
+  display: block;
+
+}
+}
+

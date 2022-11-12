@@ -10,6 +10,7 @@
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
   </head>
   <body>
     <section id="landing">
@@ -30,10 +31,24 @@
               <a href="#contact" class="nav__link">Contact</a>
             </li>
             <li>
-              <a href="#books" class="nav__link nav_link--primary">Books</a>
+              <a href="#features" class="nav__link nav_link--primary">Books</a>
             </li>
           </ul>
+        
+        <button class="btn__menu" onclick="openMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+<i class="fas fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list"><a href="#" class="menu__link"onclick="closeMenu()">Home</a></li>
+            <li class="menu__list"><a href="#features" class="menu__link"onclick="closeMenu()">Books</a></li>
+            <li class="menu__list no-cursor"><a href="#" class="menu__link"onclick="closeMenu()">Contact</a></li>
+          </ul>
         </div>
+      </div>
       </nav>
       <header>
         <div class="header__container">
@@ -42,7 +57,7 @@
             <h2>
               Find your dream book with <span class="purple">Library</span>
             </h2>
-            <button class="btn">Browse Books</button>
+            <a href="#features"><button class="btn">Browse Books</button></a>
           </div>
           <figure class="header__img--wrapper">
             <img
@@ -367,7 +382,9 @@
   <div class="row">
     <div class="explore__description">
     <h2 class="section__title">Explore more <span class="purple">Books</span></h2>
+    <a href="#features">
     <button class="btn">Browse books</button>
+  </a>
   </div>
   </div>
 </div>
@@ -379,9 +396,11 @@
 <div class="container">
 <div class="row">
   <div class="footer__wrapper">
+    <a href="">
 <figure class="footer__logo">
   <img class="footer__logo--img"src="/E-Commerce Website/Library JS/Library JS Starter/assets/Library.svg" alt="">
 </figure>
+</a>
 <ul class="footer__links">
   <li><a class="footer__link"href="#home">Home</a></li>
   <li><a class="footer__link"href="#about">About</a></li>
