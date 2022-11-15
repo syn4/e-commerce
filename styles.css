@@ -273,7 +273,7 @@ button:active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  
 }
 
 .highlight__img {
@@ -297,6 +297,7 @@ button:active {
 .highlight__subtitle {
   font-size: 20px;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 /* FEATURES */
@@ -309,7 +310,7 @@ button:active {
 
 
 .book__img{
-  height: 380px;
+  max-height: 380px;
   transition: all 300ms ease;
   cursor: not-allowed;
   
@@ -317,11 +318,13 @@ button:active {
 
 .books{
   display: flex;
+  flex-wrap: wrap;
 }
 
 .book{
   width: 25%;
   padding: 24px;
+  
 }
 
 .book__img--wrapper{
@@ -437,6 +440,52 @@ footer{
   color: white;
 }
 
+/* SMART PHONES, TABLETS, LARGE SMART PHONES */
+@media (max-width:768px){
+  .header__description{
+    padding: 0 24px;
+  }
+
+  h1{
+    font-size: 40px;
+
+  }
+
+  h2{
+    font-size: 26px;
+  }
+
+  button{
+    font-size: 18px;
+  }
+
+
+  /* HIGHLIGHTS */
+
+  .highlight__wrapper{
+
+  }
+
+  .highlight__subtitle{
+    
+  }
+
+
+  /* BOOKS  */
+
+  .book {
+    width: 50%;
+  }
+  
+  .book__latest{
+    width: 50%;
+  }
+
+}
+
+
+
+/* SMALL PHONES, LARGE PHONES */
 
 @media (max-width: 550px){
 .nav__links{
@@ -446,5 +495,23 @@ footer{
   display: block;
 
 }
+
+.highlight{
+  width: 100%;
+  
+}
+
+.highlight__wrapper{
+  flex-wrap: wrap;
+}
+
+.highlight:not(:last-child){
+  margin-bottom: 24px;
+}
+
+
+
+
+
 }
 
